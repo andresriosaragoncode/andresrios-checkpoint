@@ -7,7 +7,7 @@ const StandupList = ({ data }: any) => {
   const [drawerData, setDrawerData] = useState({});
   const list = data.map((standup: any) => (
     <li
-      className="border-solid rounded hover:bg-gray-700 mb-2 p-4 border-black bg-gray-500 "
+      className="border-solid rounded hover:bg-gray-700 hover:text-white mb-2 p-4 border-black bg-gray-500 "
       key={`${standup.date}_${standup.username}`}
       onClick={() => {
         setDrawerOpen(true);

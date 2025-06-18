@@ -39,6 +39,7 @@ const CreateStandupForm = ({ standup }: any) => {
   const [error, setError] = useState(false);
 
   const handler = async () => {
+    setSubmitted(true);
     const response = await fetch("/api/standup", {
       method: "POST",
       body: JSON.stringify({
@@ -53,6 +54,7 @@ const CreateStandupForm = ({ standup }: any) => {
     } else {
       // WE NEED TO PUT MORE DESCRIPTIVE ERROR MESSAGES
       setError(true);
+      setSubmitted(false);
     }
   };
 
@@ -98,6 +100,7 @@ const CreateStandupForm = ({ standup }: any) => {
         <button
           type="submit"
           data-testid="submitStandupButton"
+          disabled={submitted}
           className={`w-full mx-auto font-Amiko border  rounded text-ms font-bold p-3 my-5 bg-gray-700 text-lg hover:bg-gray-200`}
         >
           Submit

@@ -37,7 +37,7 @@ const StandupContainer = ({ users, profile }: any) => {
     };
 
     fetchData();
-  }, [query]);
+  }, [query, setStandupList]);
 
   return (
     <div>
