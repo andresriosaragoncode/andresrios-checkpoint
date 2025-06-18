@@ -6,19 +6,46 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
+    "cypress:open": "cypress open",
     "lint": "next lint"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.1.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/bcrypt": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/ramda": "^0.30.2",
+    "bcrypt": "^6.0.0",
+    "date-fns": "^4.1.0",
+    "eslint-plugin-jest-dom": "^5.5.0",
+    "eslint-plugin-testing-library": "^7.5.3",
+    "i": "^0.3.7",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.17.0",
+    "next": "15.3.3",
+    "next-auth": "^4.24.11",
+    "npm": "^11.4.2",
+    "ramda": "^0.30.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.3.3"
+    "react-hook-form": "^7.58.0",
+    "react-icons": "^5.5.0",
+    "react-markdown": "^10.1.0",
+    "zod": "^3.25.66",
+    "zustand": "^5.0.5"
   },
   "devDependencies": {
-    "typescript": "^5",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "@types/node": "^20",
+    "@types/react": "^19.1.8",
+    "@types/react-dom": "^19.1.6",
+    "@types/react-test-renderer": "^19.1.0",
+    "cypress": "^14.5.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.3",
+    "eslint-config-prettier": "^9.1.0",
+    "tailwindcss": "^4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
   }
 }
