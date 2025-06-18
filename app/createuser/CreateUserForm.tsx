@@ -4,8 +4,10 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { userProfiles } from "./userProfiles";
 import { MySchemaType, mySchema } from "./validateCreateUserSchema";
+import { User } from "@/app/types";
+
+const userProfiles = ["admin", "developer", "PO"];
 
 const CreateUserForm = () => {
   const {
@@ -20,7 +22,7 @@ const CreateUserForm = () => {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState(false);
 
-  const handler = async (formData: any) => {
+  const handler = async (formData: User) => {
     const { username, password, profile } = formData;
     // setSubmitted(true);
     const response = await fetch("/api/user", {
@@ -35,13 +37,13 @@ const CreateUserForm = () => {
     // WE NEED TO ADD ERROR HANDLING for
   };
 
-  const userProfilesOptions = userProfiles.map((userProfile: string) => ({
+  const userProfilesOptions = userProfiles.map((userProfile) => ({
     label: userProfile,
     value: userProfile,
   }));
 
   return (
-    <div className="w-1/2 bg-gray-700">
+    <div className="w-1/2 bg-gray-700 mr-auto ml-auto p-4">
       <form
         data-testid="createUserForm"
         data-component="createUserForm"

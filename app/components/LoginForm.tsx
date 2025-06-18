@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@components/form/Input";
-import { signIn, useSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
 const LoginForm = () => {
@@ -18,7 +18,7 @@ const LoginForm = () => {
 
   const handler = async (formData: any) => {
     const { username, password } = formData;
-    // setSubmitted(true);
+    setSubmitted(true);
     const res = await signIn("credentials", {
       redirect: false,
       username,
@@ -35,7 +35,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="w-1/2 bg-gray-700 mr-auto ml-auto">
+    <div className="w-1/2 bg-gray-700 mr-auto ml-auto px-4 py-4 mt-10 rounded">
       <form
         data-testid="loginForm"
         data-component="loginForm"
@@ -77,6 +77,9 @@ const LoginForm = () => {
           Login
         </button>
       </form>
+      <div>
+        {`Don't have an account? Create one`} <a href="/createuser">Here</a>
+      </div>
     </div>
   );
 };

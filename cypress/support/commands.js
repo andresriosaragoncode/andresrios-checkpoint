@@ -1,4 +1,5 @@
 /// <reference types="cypress" />
+
 Cypress.Commands.add("seedDatabase", (endpoint) => {
   cy.request({
     method: "post",

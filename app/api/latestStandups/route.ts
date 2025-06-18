@@ -1,9 +1,9 @@
+import { authOptions } from "@auth/[...nextauth]/auth";
 import { getAuthorization } from "@auth/getAuthorization";
+import { Privileges } from "@auth/privileges";
 import { getServerSession } from "next-auth/next";
 import { headers } from "next/headers";
 import { NextRequest } from "next/server";
-import { authOptions } from "@auth/[...nextauth]/auth";
-import { Privileges } from "@auth/privileges";
 import { getLastStandupPerUser } from "../utils/mongo/getLastStandupPerUser";
 
 const dynamic = "force-dynamic";
