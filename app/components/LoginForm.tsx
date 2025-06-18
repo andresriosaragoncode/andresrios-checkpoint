@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Input } from "@components/form/Input";
+import { PasswordInput } from "@components/form/PasswordInput";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 
@@ -55,7 +56,7 @@ const LoginForm = () => {
           requiredMessage={"Please fill out this field"}
           testId={"loginUsernamedInput"}
         />
-        <Input
+        <PasswordInput
           errors={errors}
           label="Password *"
           name="password"

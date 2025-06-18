@@ -2,9 +2,6 @@
 
 import React, { useState } from "react";
 import { RxEyeOpen, RxEyeClosed } from "react-icons/rx";
-// import Icon from "react-icons-kit";
-// import { eyeOff } from "react-icons-kit/feather/eyeOff";
-// import { eye } from "react-icons-kit/feather/eye";
 
 interface Props {
   errors: any;
