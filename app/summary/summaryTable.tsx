@@ -9,7 +9,7 @@ const SummaryTable = ({ standups }: any) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [drawerData, setDrawerData] = useState({});
   const userHeadings = DAYS.map((day) => (
-    <th key={day} scope="col" className="px-6 py-3 hover:bg-gray-900">
+    <th key={day} scope="col" className="px-6 py-3 ">
       {day}
     </th>
   ));
@@ -22,7 +22,7 @@ const SummaryTable = ({ standups }: any) => {
         return (
           <td
             key={`${daily.username}_${daily.dayOfWeek}`}
-            className="px-6 py-4 hover:bg-gray-500"
+            className="px-6 py-4 hover:bg-gray-300 dark:hover:text-gray-900"
             onClick={() => {
               setDrawerOpen(true);
               setDrawerData(daily);
@@ -55,7 +55,7 @@ const SummaryTable = ({ standups }: any) => {
     <>
       <Drawer isOpen={drawerOpen} setIsOpen={setDrawerOpen} data={drawerData} />
       <table className=" w-full" data-testid="summaryTable">
-        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  ">
+        <thead className="text-xs dark:text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400  ">
           <tr>{...userHeadings}</tr>
         </thead>
         <tbody>{rows}</tbody>

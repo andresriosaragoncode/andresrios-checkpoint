@@ -24,7 +24,8 @@ const classes = {
   disabled:
     "block border-grey rounded p-3 w-full h-[150px] box-border focus:border-bluetransparent hover:border-ligthblue bg-gray-500 text-black preview",
   inputError: "block border-red rounded p-3 w-full h-auto box-border",
-  label: "mt-4 block",
+  label:
+    "mt-4 block text-xl mb-4 p-4 bg-gray-200 w-fit rounded dark:text-gray-900",
   error: "block text-white rounded p-1 w-fit bg-red",
   errorContainer: "mt-2",
 };
@@ -51,7 +52,7 @@ const TextArea = ({
     ? classes.disabled
     : classes.input;
   return (
-    <div className="h-auto px-10 mb-10 preview">
+    <div className="h-auto px-10 mb-10 preview ">
       <label htmlFor={id} className={`${classes?.label}`}>
         {label}
       </label>
